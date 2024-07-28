@@ -89,4 +89,13 @@ dependencies {
     implementation(libs.lottie.compose)
     // Navigation compose
     implementation(libs.androidx.navigation.compose)
+
+    // Moshi
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.moshi.adapters)
+    implementation(libs.moshi.converter)
+
+    implementation(libs.datastore.preferences)
+    implementation(libs.datastore.core)
 }
