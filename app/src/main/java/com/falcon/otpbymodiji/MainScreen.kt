@@ -174,6 +174,18 @@ fun MainScreen(viewModel: MainViewModel, networkUtils: NetworkUtils) {
 }
 
 fun getFormatedPhoneNumber(number: String): String {
+    return countryCodeRemover(redundantCharactersRemover(number))
+}
+
+fun countryCodeRemover(input: String): String {
+    return if (input.length == 12) {
+        input.substring(2)
+    } else {
+        input
+    }
+}
+
+fun redundantCharactersRemover(number: String): String {
     return number.filter { it.isDigit() }
 }
 
